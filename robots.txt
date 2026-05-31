@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://perpus-smpn1damai.netlify.app/sitemap.xml
