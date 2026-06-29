@@ -31,33 +31,46 @@
             box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.5);
         }
 
-        .header-container {
-            position: sticky; top: 15px; z-index: 100;
-            width: 92%; max-width: 1000px; margin: 0 auto 2rem;
-            border-radius: 30px; padding: 15px 25px;
-            display: flex; justify-content: space-between; align-items: center;
-            background: rgba(255, 255, 255, 0.25);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-        }
-
-        .nav-brand { display: flex; align-items: center; gap: 12px; }
-        .nav-brand img { height: 35px; width: 35px; border-radius: 50%; border: 2px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); object-fit: cover;}
-        .nav-brand .title { font-weight: 800; font-size: 1.1rem; color: #0f172a; letter-spacing: -0.5px; }
-
-        .nav-wrapper { position: relative; display: flex; align-items: center; flex: 1; justify-content: flex-end; max-width: 65%; }
-        nav { width: 100%; overflow: hidden; } 
-        nav ul {
-            display: flex; gap: 1.2rem; list-style: none; overflow-x: auto; 
-            padding: 5px 35px; margin: 0;
-            -ms-overflow-style: none; scrollbar-width: none;
-            -webkit-overflow-scrolling: touch;
-        }
-        nav ul::-webkit-scrollbar { display: none; }
-        nav ul li { flex: 0 0 auto; }
-        nav ul li a {
-            text-decoration: none; color: #1e293b; font-weight: 700; font-size: 0.95rem;
-            padding: 8px 12px; border-radius: 20px; transition: 0.3s;
-        }
+        .container { padding: 0 20px 3rem !important; }
+            .header-container { 
+                flex-direction: column; 
+                padding: 15px; 
+                gap: 12px; 
+                border-radius: 24px; 
+                margin-top: 20px;
+                width: calc(100% - 40px) !important; 
+            }
+            
+            .nav-brand { justify-content: center; width: 100%; }
+            
+            /* LAHAN PARKIR VIP UNTUK PANAH (35px Kiri Kanan) */
+            .nav-wrapper { 
+                width: 100%; 
+                position: relative; 
+                padding: 0 35px !important; 
+            }
+            
+            /* Panah dipaku mati di pojok lahan parkir, nggak akan nimpa teks */
+            .nav-arrow.left { left: 0; }
+            .nav-arrow.right { right: 0; }
+            
+            nav { width: 100%; overflow: hidden; }
+            
+            /* Padding dalam dibuang biar teks bisa jalan mulus sampai batas parkiran */
+            nav ul { 
+                padding: 5px 0 !important; 
+                gap: 1.5rem; 
+                align-items: center; 
+                justify-content: flex-start !important; 
+            } 
+            nav ul li a { 
+                font-size: 0.95rem; 
+                padding: 0.2rem 0;
+                display: flex; 
+                align-items: center; 
+                gap: 6px; 
+                white-space: nowrap; 
+            }
         nav ul li a:hover { background: rgba(255,255,255,0.6); color: #0ea5e9; }
 
         .nav-arrow {
