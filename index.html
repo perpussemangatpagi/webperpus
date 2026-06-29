@@ -121,10 +121,11 @@
 
         footer { text-align: center; padding: 1.5rem; margin: 2rem auto; width: 90%; max-width: 600px; border-radius: 30px; font-size: 0.9rem; font-weight: 600; color: #334155; }
 
-        .header-container { 
+        .container { padding: 0 20px 3rem !important; }
+            .header-container { 
                 flex-direction: column; 
                 padding: 15px; 
-                gap: 12px; /* Jarak dikecilin dikit biar makin padat */
+                gap: 12px; 
                 border-radius: 24px; 
                 margin-top: 20px;
                 width: calc(100% - 40px) !important; 
@@ -133,15 +134,17 @@
             .nav-brand { justify-content: center; width: 100%; }
             .nav-wrapper { width: 100%; position: relative; }
             
-            /* Dorong tombol panah mentok ke bibir kaca */
-            .nav-arrow.left { left: -5px; }
-            .nav-arrow.right { right: -5px; }
+            /* Panah didorong ke area kosong (pinggir kaca) */
+            .nav-arrow.left { left: -10px; }
+            .nav-arrow.right { right: -10px; }
             
+            /* INI KUNCINYA: Padding 45px biar teks ngerem sebelum kena panah */
+            nav { width: 100%; overflow: hidden; }
             nav ul { 
-                padding: 5px 28px !important; /* Jarak napas pas buat ngelewatin panah */
-                gap: 1.2rem; 
+                padding: 5px 45px !important; 
+                gap: 1.5rem; 
                 align-items: center; 
-                justify-content: flex-start !important; /* Paksa teks baris dari kiri, jangan ngumpul di tengah */
+                justify-content: flex-start !important; 
             } 
             nav ul li a { 
                 font-size: 0.95rem; 
@@ -150,8 +153,7 @@
                 align-items: center; 
                 gap: 6px; 
                 white-space: nowrap; 
-            }
-            
+            }            
             .hero-logos img { height: 70px; width: 70px; }
             .hero h1 { font-size: 2.2rem; }
             .hero h2 { font-size: 1.2rem; }
