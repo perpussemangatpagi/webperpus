@@ -31,46 +31,34 @@
             box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.5);
         }
 
-        .container { padding: 0 20px 3rem !important; }
-            .header-container { 
-                flex-direction: column; 
-                padding: 15px; 
-                gap: 12px; 
-                border-radius: 24px; 
-                margin-top: 20px;
-                width: calc(100% - 40px) !important; 
-            }
-            
-            .nav-brand { justify-content: center; width: 100%; }
-            
-            /* LAHAN PARKIR VIP UNTUK PANAH (35px Kiri Kanan) */
-            .nav-wrapper { 
-                width: 100%; 
-                position: relative; 
-                padding: 0 35px !important; 
-            }
-            
-            /* Panah dipaku mati di pojok lahan parkir, nggak akan nimpa teks */
-            .nav-arrow.left { left: 0; }
-            .nav-arrow.right { right: 0; }
-            
-            nav { width: 100%; overflow: hidden; }
-            
-            /* Padding dalam dibuang biar teks bisa jalan mulus sampai batas parkiran */
-            nav ul { 
-                padding: 5px 0 !important; 
-                gap: 1.5rem; 
-                align-items: center; 
-                justify-content: flex-start !important; 
-            } 
-            nav ul li a { 
-                font-size: 0.95rem; 
-                padding: 0.2rem 0;
-                display: flex; 
-                align-items: center; 
-                gap: 6px; 
-                white-space: nowrap; 
-            }
+        /* HEADER DESKTOP (TIDAK BOLEH RUSAK) */
+        .header-container {
+            position: sticky; top: 15px; z-index: 100;
+            width: 92%; max-width: 1000px; margin: 0 auto 2rem;
+            border-radius: 30px; padding: 15px 25px;
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(255, 255, 255, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .nav-brand { display: flex; align-items: center; gap: 12px; }
+        .nav-brand img { height: 35px; width: 35px; border-radius: 50%; border: 2px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); object-fit: cover;}
+        .nav-brand .title { font-weight: 800; font-size: 1.1rem; color: #0f172a; letter-spacing: -0.5px; }
+
+        .nav-wrapper { position: relative; display: flex; align-items: center; flex: 1; justify-content: flex-end; max-width: 65%; }
+        nav { width: 100%; overflow: hidden; } 
+        nav ul {
+            display: flex; gap: 1.2rem; list-style: none; overflow-x: auto; 
+            padding: 5px 35px; margin: 0;
+            -ms-overflow-style: none; scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+        }
+        nav ul::-webkit-scrollbar { display: none; }
+        nav ul li { flex: 0 0 auto; }
+        nav ul li a {
+            text-decoration: none; color: #1e293b; font-weight: 700; font-size: 0.95rem;
+            padding: 8px 12px; border-radius: 20px; transition: 0.3s;
+        }
         nav ul li a:hover { background: rgba(255,255,255,0.6); color: #0ea5e9; }
 
         .nav-arrow {
@@ -83,6 +71,7 @@
         .nav-arrow.left { left: 0; }
         .nav-arrow.right { right: 0; }
 
+        /* HERO & CONTENT BASE */
         .hero { text-align: center; padding: 2rem 20px 3rem; }
         .hero-logos { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; }
         .hero-logos img { height: 100px; width: 100px; object-fit: contain; border-radius: 50%; background: rgba(255, 255, 255, 0.6); padding: 5px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); border: 2px solid rgba(255,255,255,0.9); transition: transform 0.3s ease; }
@@ -134,7 +123,14 @@
 
         footer { text-align: center; padding: 1.5rem; margin: 2rem auto; width: 90%; max-width: 600px; border-radius: 30px; font-size: 0.9rem; font-weight: 600; color: #334155; }
 
-        .container { padding: 0 20px 3rem !important; }
+        /* ========================================= */
+        /* PENGATURAN KHUSUS HP (MOBILE RESPONSIVE)  */
+        /* ========================================= */
+        @media (max-width: 768px) {
+            html { scroll-padding-top: 160px; }
+            
+            /* FIX SHAPE SEJAJAR */
+            .container { padding: 0 20px 3rem !important; }
             .header-container { 
                 flex-direction: column; 
                 padding: 15px; 
@@ -145,16 +141,25 @@
             }
             
             .nav-brand { justify-content: center; width: 100%; }
-            .nav-wrapper { width: 100%; position: relative; }
             
-            /* Panah didorong ke area kosong (pinggir kaca) */
-            .nav-arrow.left { left: -10px; }
-            .nav-arrow.right { right: -10px; }
+            /* LAHAN PARKIR VIP UNTUK PANAH (35px Kiri Kanan) */
+            .nav-wrapper { 
+                width: 100%; 
+                position: relative; 
+                padding: 0 35px !important; 
+                justify-content: flex-start;
+                max-width: 100%;
+            }
             
-            /* INI KUNCINYA: Padding 45px biar teks ngerem sebelum kena panah */
+            /* Panah dipaku mati di pojok lahan parkir, nggak akan nimpa teks */
+            .nav-arrow.left { left: 0; }
+            .nav-arrow.right { right: 0; }
+            
             nav { width: 100%; overflow: hidden; }
+            
+            /* Padding dalam dibuang biar teks bisa jalan mulus sampai batas parkiran */
             nav ul { 
-                padding: 5px 45px !important; 
+                padding: 5px 0 !important; 
                 gap: 1.5rem; 
                 align-items: center; 
                 justify-content: flex-start !important; 
@@ -167,6 +172,7 @@
                 gap: 6px; 
                 white-space: nowrap; 
             }            
+            
             .hero-logos img { height: 70px; width: 70px; }
             .hero h1 { font-size: 2.2rem; }
             .hero h2 { font-size: 1.2rem; }
