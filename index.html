@@ -3,39 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- ========================================== -->
-    <!-- MULAI DARI SINI: KODE SEO YANG DITAMBAHKAN -->
-    <!-- ========================================== -->
     <title>Perpustakaan SMPN 1 Damai - Semangat Pagi</title>
     <meta name="description" content="Website resmi Perpustakaan Semangat Pagi SMPN 1 Damai. Ekosistem pintar perpustakaan untuk mendukung generasi pembelajar yang unggul dan berliterasi tinggi.">
     <meta name="keywords" content="Perpustakaan SMPN 1 Damai, Perpus SMPN 1 Damai, Perpustakaan Semangat Pagi, SMPN 1 Damai, Kutai Barat, Perpustakaan Sekolah">
-    <meta name="author" content="Nur Alfi Syahri, S.P. - SMPN 1 Damai">
     
-    <!-- Open Graph / Facebook / WhatsApp (Agar saat link dibagikan muncul judul & deskripsi) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://perpus-smpn1damai.netlify.app/">
-    <meta property="og:title" content="Perpustakaan SMPN 1 Damai - Semangat Pagi">
-    <meta property="og:description" content="Ekosistem pintar perpustakaan SMPN 1 Damai untuk mendukung generasi pembelajar yang unggul dan berliterasi tinggi.">
-    <!-- ========================================== -->
-    <!-- AKHIR KODE SEO                             -->
-    <!-- ========================================== -->
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
     <style>
-        /* Reset & Font Base */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        html {
-            scroll-padding-top: 100px; 
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; scroll-behavior: smooth; }
+        html { scroll-padding-top: 100px; }
         
-        /* Latar Belakang Mesh Gradient */
         body {
             background-color: #f4f4f9;
             background-image: 
@@ -43,474 +20,115 @@
                 radial-gradient(at 80% 10%, rgba(167, 139, 250, 0.6) 0px, transparent 50%),
                 radial-gradient(at 10% 80%, rgba(251, 146, 60, 0.5) 0px, transparent 50%),
                 radial-gradient(at 90% 90%, rgba(52, 211, 153, 0.5) 0px, transparent 50%);
-            background-attachment: fixed;
-            color: #1e293b;
-            line-height: 1.6;
-            padding-top: 1rem;
+            background-attachment: fixed; color: #1e293b; line-height: 1.6;
         }
 
-        /* Kelas Efek Kaca (Glassmorphism) */
         .glass {
             background: rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(14px) saturate(140%);
             -webkit-backdrop-filter: blur(14px) saturate(140%);
             border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 
-                0 10px 30px 0 rgba(0, 0, 0, 0.1), 
-                inset 0 1px 1px rgba(255, 255, 255, 0.5), 
-                inset 0 -1px 1px rgba(0, 0, 0, 0.03);
+            box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.5);
         }
 
-        /* Navigasi Melayang Desktop */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            position: sticky;
-            top: 1.5rem;
-            z-index: 100;
-            width: 90%;
-            max-width: 900px;
-            margin: 0 auto 2rem;
-            border-radius: 50px; 
-        }
-
-        nav .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        nav .nav-brand img {
-            height: 35px;
-            width: 35px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid rgba(255, 255, 255, 0.8);
-        }
-
-        nav .logo-text {
-            font-size: 1.1rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            color: #0f172a;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        nav ul li a {
-            color: #1e293b;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-        }
-
-        nav ul li a:hover {
-            color: #000;
-            text-shadow: 0 0 10px rgba(255,255,255,0.8);
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 3rem 20px 3rem;
-        }
-
-        .hero-logos {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-logos img {
-            height: 100px;
-            width: 100px;
-            object-fit: contain;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.6);
-            padding: 5px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-            border: 2px solid rgba(255,255,255,0.9);
-            transition: transform 0.3s ease;
-        }
-
-        .hero-logos img:hover {
-            transform: scale(1.05);
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-            font-weight: 800;
-            letter-spacing: -1px;
-            color: #0f172a;
-        }
-
-        .hero h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #1e293b;
-            margin-bottom: 1.5rem;
-            opacity: 0.9;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto;
-            color: #334155;
-            font-weight: 500;
-        }
-
-        .npp-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.4);
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            border: 1px solid rgba(255, 255, 255, 0.6);
-        }
-
-        /* Kontainer Konten Utama */
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px 4rem;
-        }
-
-        /* Desain Card */
-        .section-card {
-            padding: 3rem;
-            border-radius: 36px;
-            margin-bottom: 2.5rem;
-        }
-
-        h2.section-title {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            font-weight: 800;
-            letter-spacing: -1px;
-            color: #0f172a;
-        }
-
-        /* Visi Misi Grid */
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-        
-        .box-kaca {
-            padding: 2rem;
-            border-radius: 24px;
-            background: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4);
-        }
-
-        .box-kaca h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            color: #0f172a;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        ul.list-rapi {
-            margin-left: 1.5rem;
-        }
-
-        ul.list-rapi li {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Struktur Organisasi Tree Chart */
-        .tree-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            margin-top: 2rem;
-        }
-
-        .tree-node {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 250px; 
-            padding: 1.5rem 1rem;
-            border-radius: 24px;
-            background: rgba(255, 255, 255, 0.3);
+        /* HEADER & NAVIGASI KEKINIAN (GAYA MAIN WEB) */
+        .header-container {
+            position: sticky; top: 15px; z-index: 100;
+            width: 92%; max-width: 1000px; margin: 0 auto 2rem;
+            border-radius: 30px; padding: 15px 25px;
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(255, 255, 255, 0.25);
             border: 1px solid rgba(255, 255, 255, 0.4);
-            border-top: 1px solid rgba(255, 255, 255, 0.9);
-            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.7), 0 8px 20px rgba(0,0,0,0.05);
-            backdrop-filter: blur(10px);
-            text-align: center;
-            z-index: 2;
-            transition: transform 0.3s ease;
         }
 
-        .tree-node:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.4);
-        }
+        .nav-brand { display: flex; align-items: center; gap: 12px; }
+        .nav-brand img { height: 35px; width: 35px; border-radius: 50%; border: 2px solid white; box-shadow: 0 4px 10px rgba(0,0,0,0.1); object-fit: cover;}
+        .nav-brand .title { font-weight: 800; font-size: 1.1rem; color: #0f172a; letter-spacing: -0.5px; }
 
-        .tree-img {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 0.8rem;
-            border: 3px solid #fff;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        .nav-wrapper { position: relative; display: flex; align-items: center; flex: 1; justify-content: flex-end; max-width: 65%; }
+        nav { width: 100%; overflow: hidden; } 
+        nav ul {
+            display: flex; gap: 1.2rem; list-style: none; overflow-x: auto; 
+            padding: 5px 35px; margin: 0;
+            -ms-overflow-style: none; scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
         }
-
-        .tree-name {
-            font-weight: 800;
-            color: #0f172a;
-            font-size: 1.1rem;
-            line-height: 1.2;
-            margin-bottom: 0.3rem;
+        nav ul::-webkit-scrollbar { display: none; }
+        nav ul li { flex: 0 0 auto; }
+        nav ul li a {
+            text-decoration: none; color: #1e293b; font-weight: 700; font-size: 0.95rem;
+            padding: 8px 12px; border-radius: 20px; transition: 0.3s;
         }
+        nav ul li a:hover { background: rgba(255,255,255,0.6); color: #0ea5e9; }
 
-        .tree-title {
-            font-size: 0.75rem;
-            color: #1e293b;
-            font-weight: 700;
-            text-transform: uppercase;
-            background: rgba(255,255,255,0.5);
-            padding: 0.3rem 0.6rem;
-            border-radius: 12px;
-            display: inline-block;
+        .nav-arrow {
+            display: none; position: absolute; top: 50%; transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(255, 255, 255, 0.9);
+            width: 32px; height: 32px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
+            cursor: pointer; color: #0ea5e9; font-weight: bold; z-index: 10;
+            justify-content: center; align-items: center;
         }
+        .nav-arrow.left { left: 0; }
+        .nav-arrow.right { right: 0; }
 
+        /* HERO KAMPUS */
+        .hero { text-align: center; padding: 2rem 20px 3rem; }
+        .hero-logos { display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 1.5rem; }
+        .hero-logos img { height: 100px; width: 100px; object-fit: contain; border-radius: 50%; background: rgba(255, 255, 255, 0.6); padding: 5px; box-shadow: 0 8px 25px rgba(0,0,0,0.1); border: 2px solid rgba(255,255,255,0.9); transition: transform 0.3s ease; }
+        .hero-logos img:hover { transform: scale(1.05); }
+        .hero h1 { font-size: 3rem; margin-bottom: 0.5rem; font-weight: 800; letter-spacing: -1px; color: #0f172a; }
+        .hero h2 { font-size: 1.5rem; font-weight: 600; color: #1e293b; margin-bottom: 1.5rem; opacity: 0.9; }
+        .hero p { font-size: 1.1rem; max-width: 700px; margin: 0 auto; color: #334155; font-weight: 500; }
+        .npp-badge { display: inline-block; background: rgba(255, 255, 255, 0.4); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 700; margin-bottom: 1rem; border: 1px solid rgba(255, 255, 255, 0.6); }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px 4rem; }
+        .section-card { padding: 3rem; border-radius: 36px; margin-bottom: 2.5rem; }
+        h2.section-title { font-size: 2rem; margin-bottom: 1.5rem; font-weight: 800; letter-spacing: -1px; color: #0f172a; border-bottom: 3px solid rgba(255,255,255,0.3); padding-bottom: 10px; display: inline-block;}
+
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .box-kaca { padding: 2rem; border-radius: 24px; background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.4); }
+        .box-kaca h3 { font-size: 1.4rem; margin-bottom: 1rem; color: #0f172a; display: flex; align-items: center; gap: 0.5rem; }
+        ul.list-rapi { margin-left: 1.5rem; }
+        ul.list-rapi li { margin-bottom: 0.5rem; }
+
+        .tree-container { display: flex; flex-direction: column; align-items: center; width: 100%; margin-top: 2rem; }
+        .tree-node { display: flex; flex-direction: column; align-items: center; width: 250px; padding: 1.5rem 1rem; border-radius: 24px; background: rgba(255, 255, 255, 0.3); border: 1px solid rgba(255, 255, 255, 0.4); border-top: 1px solid rgba(255, 255, 255, 0.9); box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.7), 0 8px 20px rgba(0,0,0,0.05); text-align: center; transition: transform 0.3s ease; }
+        .tree-node:hover { transform: translateY(-5px); background: rgba(255, 255, 255, 0.4); }
+        .tree-img { width: 90px; height: 90px; border-radius: 50%; object-fit: cover; margin-bottom: 0.8rem; border: 3px solid #fff; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .tree-name { font-weight: 800; color: #0f172a; font-size: 1.1rem; line-height: 1.2; margin-bottom: 0.3rem; }
+        .tree-title { font-size: 0.75rem; color: #1e293b; font-weight: 700; text-transform: uppercase; background: rgba(255,255,255,0.5); padding: 0.3rem 0.6rem; border-radius: 12px; display: inline-block; }
         .tree-line-v { width: 3px; height: 30px; background: rgba(255, 255, 255, 0.8); }
         .tree-line-h { width: 50%; height: 3px; background: rgba(255, 255, 255, 0.8); }
         .tree-branch-container { display: flex; width: 100%; justify-content: center; flex-wrap: nowrap; }
         .tree-branch { display: flex; flex-direction: column; align-items: center; width: 50%; }
 
-        /* =================================================== */
-        /* DENAH PERPUSTAKAAN (REVISI TATA LETAK TERBARU)      */
-        /* =================================================== */
-        .denah-wrapper {
-            background: rgba(255, 255, 255, 0.15);
-            padding: 1.5rem;
-            border-radius: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: inset 0 0 20px rgba(255,255,255,0.2);
-            /* Memastikan scroll samping aktif di mobile */
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        /* Menggunakan Grid Area Presisi */
-        .denah-map {
-            display: grid;
-            grid-template-areas: 
-                "pintu    petugas  pohon    koran"
-                "komputer lesehan  lesehan  lesehan"
-                "rak1     rak1     rak2     rak2"
-                "introvert rak_v    rak_v    kelompok"
-                "rak_b    rak_b    rak_b    rak_b";
-            grid-template-columns: 1.2fr 1fr 1fr 1.2fr;
-            grid-auto-rows: minmax(85px, auto);
-            gap: 12px;
-            width: 100%;
-            /* Batas minimum lebar agar denah tidak gepeng di HP */
-            min-width: 700px;
-        }
-
-        .ruang-glass {
-            background: rgba(255, 255, 255, 0.25);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            border-top: 1px solid #fff;
-            border-radius: 16px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 10px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: #0f172a;
-            backdrop-filter: blur(8px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.02), inset 0 1px 1px rgba(255,255,255,0.6);
-            transition: transform 0.2s;
-        }
-
+        .denah-wrapper { background: rgba(255, 255, 255, 0.15); padding: 1.5rem; border-radius: 30px; border: 1px solid rgba(255, 255, 255, 0.3); overflow-x: auto; -webkit-overflow-scrolling: touch; }
+        .denah-map { display: grid; grid-template-areas: "pintu petugas pohon koran" "komputer lesehan lesehan lesehan" "rak1 rak1 rak2 rak2" "introvert rak_v rak_v kelompok" "rak_b rak_b rak_b rak_b"; grid-template-columns: 1.2fr 1fr 1fr 1.2fr; grid-auto-rows: minmax(85px, auto); gap: 12px; width: 100%; min-width: 700px; }
+        .ruang-glass { background: rgba(255, 255, 255, 0.25); border: 1px solid rgba(255, 255, 255, 0.5); border-top: 1px solid #fff; border-radius: 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 10px; font-size: 0.9rem; font-weight: 700; color: #0f172a; backdrop-filter: blur(8px); transition: transform 0.2s; }
         .ruang-glass:hover { transform: scale(1.02); background: rgba(255, 255, 255, 0.4); }
-        .ruang-glass .icon { font-size: 1.6rem; margin-bottom: 0.3rem; filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1)); }
+        .ruang-glass .icon { font-size: 1.6rem; margin-bottom: 0.3rem; }
+        .area-pintu { grid-area: pintu; border: 2px solid #fff; background: rgba(255,255,255,0.6); } .area-petugas { grid-area: petugas; background: rgba(14, 165, 233, 0.3); } .area-pohon { grid-area: pohon; background: rgba(251, 146, 60, 0.3); } .area-koran { grid-area: koran; background: rgba(244, 114, 182, 0.3); } .area-komputer { grid-area: komputer; background: rgba(52, 211, 153, 0.25); } .area-lesehan { grid-area: lesehan; background: rgba(167, 139, 250, 0.25); } .area-rak1 { grid-area: rak1; background: rgba(99, 102, 241, 0.3); } .area-rak2 { grid-area: rak2; background: rgba(99, 102, 241, 0.3); } .area-introvert { grid-area: introvert; background: rgba(241, 245, 249, 0.5); } .area-rak-v { grid-area: rak_v; background: rgba(99, 102, 241, 0.3); } .area-kelompok { grid-area: kelompok; background: rgba(253, 224, 71, 0.3); } .area-rak-b { grid-area: rak_b; background: rgba(99, 102, 241, 0.35); }
 
-        /* Penempatan Grid Area Sesuai Denah Baru */
-        .area-pintu { grid-area: pintu; border: 2px solid #fff; background: rgba(255,255,255,0.6); }
-        .area-petugas { grid-area: petugas; background: rgba(14, 165, 233, 0.3); }
-        .area-pohon { grid-area: pohon; background: rgba(251, 146, 60, 0.3); }
-        .area-koran { grid-area: koran; background: rgba(244, 114, 182, 0.3); }
-        
-        .area-komputer { grid-area: komputer; background: rgba(52, 211, 153, 0.25); }
-        .area-lesehan { grid-area: lesehan; background: rgba(167, 139, 250, 0.25); }
-        
-        .area-rak1 { grid-area: rak1; background: rgba(99, 102, 241, 0.3); }
-        .area-rak2 { grid-area: rak2; background: rgba(99, 102, 241, 0.3); }
-        
-        .area-introvert { grid-area: introvert; background: rgba(241, 245, 249, 0.5); }
-        .area-rak-v { grid-area: rak_v; background: rgba(99, 102, 241, 0.3); }
-        .area-kelompok { grid-area: kelompok; background: rgba(253, 224, 71, 0.3); }
-        
-        .area-rak-b { grid-area: rak_b; background: rgba(99, 102, 241, 0.35); }
+        .galeri-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 1.5rem; }
+        .galeri-item { border-radius: 16px; overflow: hidden; border: 2px solid rgba(255, 255, 255, 0.5); position: relative; aspect-ratio: 4/3; background: rgba(255,255,255,0.2); }
+        .galeri-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+        .galeri-item:hover img { transform: scale(1.1); }
 
-
-        /* Galeri Kegiatan */
-        .galeri-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 15px;
-            margin-top: 1.5rem;
-        }
-
-        .galeri-item {
-            border-radius: 16px;
-            overflow: hidden;
-            border: 2px solid rgba(255, 255, 255, 0.5);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            position: relative;
-            aspect-ratio: 4/3; 
-            background: rgba(255,255,255,0.2);
-            backdrop-filter: blur(5px);
-        }
-
-        .galeri-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; 
-            transition: transform 0.4s ease;
-        }
-
-        .galeri-item:hover img {
-            transform: scale(1.1); 
-        }
-
-        /* E-Katalog Section */
-        .dashboard-section {
-            text-align: center;
-            padding: 5rem 20px;
-            border-radius: 40px;
-            margin-bottom: 3rem;
-            position: relative;
-            overflow: hidden;
-        }
-
+        .dashboard-section { text-align: center; padding: 5rem 20px; border-radius: 40px; margin-bottom: 3rem; }
         .btn-container { display: flex; justify-content: center; gap: 1.5rem; margin-top: 2.5rem; }
+        @keyframes pulse-glow { 0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); } 70% { box-shadow: 0 0 0 20px rgba(255, 255, 255, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); } }
+        .btn-action { display: inline-flex; align-items: center; justify-content: center; color: white; text-decoration: none; padding: 1.2rem 2.2rem; font-size: 1.15rem; font-weight: 800; border-radius: 50px; transition: all 0.3s ease; animation: pulse-glow 2s infinite; }
+        .btn-sibi { background: #0ea5e9; border: 2px solid #38bdf8; } .btn-sibi:hover { background: #0284c7; transform: scale(1.05) translateY(-2px); animation: none; }
+        .btn-drive { background: #10b981; border: 2px solid #34d399; animation-delay: 1s; } .btn-drive:hover { background: #059669; transform: scale(1.05) translateY(-2px); animation: none; }
 
-        @keyframes pulse-glow {
-            0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
-            70% { box-shadow: 0 0 0 20px rgba(255, 255, 255, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
-        }
+        footer { text-align: center; padding: 1.5rem; margin: 2rem auto; width: 90%; max-width: 600px; border-radius: 30px; font-size: 0.9rem; font-weight: 600; color: #334155; }
 
-        .btn-action {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            padding: 1.2rem 2.2rem;
-            font-size: 1.15rem;
-            font-weight: 800;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            animation: pulse-glow 2s infinite;
-        }
-
-        .btn-sibi { background: #0ea5e9; border: 2px solid #38bdf8; }
-        .btn-sibi:hover { background: #0284c7; transform: scale(1.05) translateY(-2px); animation: none; }
-        .btn-drive { background: #10b981; border: 2px solid #34d399; animation-delay: 1s; }
-        .btn-drive:hover { background: #059669; transform: scale(1.05) translateY(-2px); animation: none; }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            margin: 2rem auto;
-            width: 90%;
-            max-width: 600px;
-            border-radius: 30px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #334155;
-        }
-
-        /* =================================================== */
-        /* RESPONSIF MOBILE: SWIPE MENU YANG LEGA & RAPI       */
-        /* =================================================== */
         @media (max-width: 768px) {
-            html { 
-                scroll-padding-top: 135px; 
-            }
-            
-            nav {
-                flex-direction: column;
-                border-radius: 24px;
-                gap: 0.5rem;
-                padding: 0.8rem 1rem;
-                width: 92%;
-                top: 0.8rem;
-            }
-            
-            nav .nav-brand { 
-                justify-content: center; 
-                width: 100%;
-            }
-            nav .nav-brand img { height: 26px; width: 26px; }
-            nav .logo-text { font-size: 0.95rem; }
-            
-            /* SWIPE HORIZONTAL MENU YANG SEIMBANG */
-            nav ul {
-                display: flex; /* Flexbox linear */
-                flex-direction: row;
-                flex-wrap: nowrap; /* Mencegah turun ke bawah */
-                justify-content: flex-start;
-                align-items: center;
-                gap: 1.5rem; /* Jarak antar menu yang ideal */
-                width: 100%;
-                border-top: 1px solid rgba(255, 255, 255, 0.2);
-                padding: 0.8rem 0.5rem 0.4rem 0.5rem; /* Padding agar tidak mepet kiri/kanan bingkai */
-                
-                /* Mengaktifkan swipe */
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-            }
-            
-            /* Sembunyikan scrollbar agar minimalis */
-            nav ul::-webkit-scrollbar {
-                display: none;
-            }
-            nav ul {
-                -ms-overflow-style: none;  
-                scrollbar-width: none;  
-            }
-            
-            nav ul li {
-                flex: 0 0 auto; /* Mencegah teks menu menyusut gepeng */
-            }
-            
-            nav ul li a { 
-                font-size: 0.9rem; 
-                padding: 0.2rem 0;
-                display: block;
-                white-space: nowrap; /* Teks tidak akan patah */
-            }
+            html { scroll-padding-top: 160px; }
+            .header-container { flex-direction: column; padding: 15px; gap: 15px; border-radius: 24px; }
+            .nav-brand { justify-content: center; width: 100%; }
+            .nav-wrapper { width: 100%; max-width: 100%; justify-content: flex-start; }
+            nav ul { padding: 5px 30px 5px 10px; gap: 1rem; } 
             
             .hero-logos img { height: 70px; width: 70px; }
             .hero h1 { font-size: 2.2rem; }
@@ -526,17 +144,11 @@
             .tree-title { font-size: 0.55rem; padding: 0.2rem 0.4rem; border-radius: 8px; }
             .tree-line-v { height: 20px; } 
 
-            /* Denah Responsif: Wrapper bisa di-scroll ke samping, isinya tetap proporsional */
             .denah-wrapper { padding: 15px; border-radius: 20px; }
             .ruang-glass { padding: 8px; font-size: 0.75rem; line-height: 1.2; }
             .ruang-glass .icon { font-size: 1.2rem; margin-bottom: 2px; }
 
-            .galeri-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 10px;
-            }
-            .galeri-item { border-radius: 12px; }
-
+            .galeri-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
             .btn-container { flex-direction: column; gap: 1rem; margin-top: 2rem; }
             .btn-action { width: 100%; padding: 1.2rem; font-size: 1.1rem; }
         }
@@ -544,21 +156,28 @@
 </head>
 <body>
 
-    <nav class="glass">
+    <header class="header-container glass">
         <div class="nav-brand">
             <img src="gambar/logo SMP1.jpg" alt="Logo SMPN 1 Damai">
-            <img src="gambar/Logo Perpustakaan SMPN 1 Damai.png" alt="Logo Perpustakaan">
-            <span class="logo-text">Perpus Semangat Pagi</span>
+            <img src="gambar/Logo Perpustakaan SMPN 1 Damai.png" alt="Logo Perpus">
+            <div class="title">Perpus Damai</div>
         </div>
-        <ul>
-            <li><a href="#profil">Profil</a></li>
-            <li><a href="#info">Tata Tertib</a></li>
-            <li><a href="#struktur">Struktur</a></li>
-            <li><a href="#denah">Denah</a></li>
-            <li><a href="#galeri">Galeri</a></li>
-            <li><a href="#katalog">Katalog</a></li>
-        </ul>
-    </nav>
+        <div class="nav-wrapper">
+            <button class="nav-arrow left" onclick="scrollNav(-100)"><i class="fa-solid fa-chevron-left"></i></button>
+            <nav>
+                <ul id="nav-list">
+                    <li><a href="https://smpn1damai.web.id" style="color: #0ea5e9;"><i class="fa-solid fa-globe"></i> Web Utama</a></li>
+                    <li><a href="#profil">Profil</a></li>
+                    <li><a href="#info">Tata Tertib</a></li>
+                    <li><a href="#struktur">Struktur</a></li>
+                    <li><a href="#denah">Denah</a></li>
+                    <li><a href="#galeri">Galeri</a></li>
+                    <li><a href="#katalog">Katalog</a></li>
+                </ul>
+            </nav>
+            <button class="nav-arrow right" onclick="scrollNav(100)"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </header>
 
     <header class="hero">
         <div class="hero-logos">
@@ -773,5 +392,25 @@
         &copy; 2026 | Admin Web: Nur Alfi Syahri, S.P.
     </footer>
 
+    <script>
+        const navList = document.getElementById('nav-list');
+        const arrowLeft = document.querySelector('.nav-arrow.left');
+        const arrowRight = document.querySelector('.nav-arrow.right');
+
+        function cekPanah() {
+            if(!navList || !arrowLeft || !arrowRight) return;
+            arrowLeft.style.display = navList.scrollLeft > 5 ? 'flex' : 'none';
+            const sisaScroll = navList.scrollWidth - navList.clientWidth - navList.scrollLeft;
+            arrowRight.style.display = sisaScroll > 5 ? 'flex' : 'none';
+        }
+
+        function scrollNav(jarak) { if(navList) navList.scrollBy({ left: jarak, behavior: 'smooth' }); }
+        
+        if(navList) {
+            navList.addEventListener('scroll', cekPanah);
+            window.addEventListener('resize', cekPanah);
+            setTimeout(cekPanah, 500); 
+        }
+    </script>
 </body>
 </html>
