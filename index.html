@@ -123,9 +123,24 @@
 
         @media (max-width: 768px) {
             html { scroll-padding-top: 160px; }
-            .header-container { flex-direction: column; padding: 15px; gap: 15px; border-radius: 24px; margin-top: 10px;}
+            
+            /* ========================================= */
+            /* INI KUNCI BIAR SHAPE-NYA SEJAJAR PRESISI  */
+            /* ========================================= */
+            .container { padding: 0 20px 3rem !important; }
+            .header-container { 
+                flex-direction: column; 
+                padding: 15px; 
+                gap: 15px; 
+                border-radius: 24px; 
+                margin-top: 20px;
+                /* Memaksa lebar header = 100% layar dikurangi jarak kiri 20px & kanan 20px */
+                width: calc(100% - 40px) !important; 
+            }
+            /* ========================================= */
+
             .nav-brand { justify-content: center; width: 100%; }
-            .nav-wrapper { width: 100%; max-width: 100%; justify-content: flex-start; }
+            /* ... sisa kode di bawahnya biarkan saja ... */
             
             /* INI DIA FIX-NYA: Padding Kiri Kanan Dibuat Sama 35px */
             nav ul { padding: 5px 35px; gap: 1rem; } 
